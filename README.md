@@ -7,7 +7,7 @@ review, slack statistics, and channel management.
 
 ## Getting up and running
 
-Wheelie is a heroku app, so let's get that set up. A straightforward way is to clone this repo and go through the steps of adding a [heroku remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote) and deploying to it.
+Wheelie is a heroku app, so let's get that set up. A straightforward way is to clone this repo and go through the steps of adding a [heroku remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote) and deploying to it. To deploy the branch `latest` to heroku, you'll need to run `git push heroku latest:main` after adding the remote. 
 
 Also, add the redis addon: `heroku addons:create rediscloud:30`
 
