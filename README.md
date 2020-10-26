@@ -7,7 +7,7 @@ review, slack statistics, and channel management.
 
 ## Getting up and running
 
-Wheelie is a heroku app, so let's get that set up. A straightforward way is to clone this repo and go through the steps of adding a [heroku remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote) and deploying to it.
+Wheelie is a heroku app, so let's get that set up. A straightforward way is to clone this repo and go through the steps of adding a [heroku remote](https://devcenter.heroku.com/articles/git#creating-a-heroku-remote) and deploying to it. To deploy the branch `latest` to heroku, you'll need to run `git push heroku latest:main` after adding the remote. 
 
 Also, add the redis addon: `heroku addons:create rediscloud:30`
 
@@ -26,7 +26,7 @@ Then, run `heroku config:set APP_URL=https://<appname>.herokuapp.com`
 
 #### OAuth and Permissions
 
-Next, you should add the app's redirect uri to the redirect field on that page.
+Next, you should add the app's redirect uri to the redirect field on the Oauth & Permissions page in Slack's App Builder site.
 The URI is: `https://<appname>.herokuapp.com/oauth`
 
 #### Bot Users
@@ -35,12 +35,12 @@ Pick a valid name for your bot. Anything is fine.
 
 #### Interactive Messages
 
-Next, go to Interactive Messages and set `https://<appname>.herokuapp.com/button`
+Next, go to Interactivity & Shortcuts and set `https://<appname>.herokuapp.com/button`
 as the Request URL.
 
-#### Slack Commands
+#### Slash Commands
 
-In the Slack Commands section, set up all the Wheelie commands as follows, using
+In the Slash Commands section, set up all the Wheelie commands as follows, using
 `https://<appname>.herokuapp.com/command` as the Request URL for all of them (the
 same endpoint is shared across all commands).
 
